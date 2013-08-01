@@ -1,7 +1,7 @@
 <?php
 /*
-    ”Â‚ğŒ©‚Ä‚¢‚é‚¨‚¨‚æ‚»‚Ìl”‚ğo—Í‚·‚é
-    javascript‚©‚çŒÄ‚Ño‚·
+    æ¿ã‚’è¦‹ã¦ã„ã‚‹ãŠãŠã‚ˆãã®äººæ•°ã‚’å‡ºåŠ›ã™ã‚‹
+    javascriptã‹ã‚‰å‘¼ã³å‡ºã™
     for namamono bbs (http://namamono.pandora.nu/)
     2005/07 PCjingle
     2005/10 Ver.2
@@ -9,8 +9,8 @@
     2006/02 Ver.2.1.1
 */
 
-define("IPFILE",'ipcount.log');         //ƒAƒNƒZƒX‚µ‚½IP‚ğŠÔ•Û‘¶(ƒp[ƒ~ƒbƒVƒ‡ƒ“F0666)
-define("TIMELIMIT",3);                  //IP‚Ì•ÛŠÔiƒfƒtƒHƒ‹ƒg‚T•ªj
+define("IPFILE",'ipcount.log');         //ã‚¢ã‚¯ã‚»ã‚¹ã—ãŸIPã‚’æ™‚é–“ä¿å­˜(ãƒ‘ãƒ¼ãƒŸãƒƒã‚·ãƒ§ãƒ³ï¼š0666)
+define("TIMELIMIT",3);                  //IPã®ä¿æŒæ™‚é–“ï¼ˆãƒ‡ãƒ•ã‚©ãƒ«ãƒˆï¼•åˆ†ï¼‰
 $ipdat="";
 $hostname=gethostbyaddr($_SERVER["REMOTE_ADDR"]);
 $countip=0;
@@ -22,7 +22,7 @@ if(is_file(IPFILE)){
     $ipdat[$i]=trim($ipdat[$i],"\n");
   }
 }
-//ŠÔØ‚ê‚ÌIP‚ğíœi’è‹`‚µ‚½ŠÔu•ªvXVj
+//æ™‚é–“åˆ‡ã‚Œã®IPã‚’å‰Šé™¤ï¼ˆå®šç¾©ã—ãŸæ™‚é–“ã€Œåˆ†ã€æ›´æ–°ï¼‰
 $flg=0;
 for($i=$countip-1; $i>=0; $i-=2){
   if(time()-$ipdat[$i]>60*TIMELIMIT){
@@ -30,14 +30,14 @@ for($i=$countip-1; $i>=0; $i-=2){
     array_pop($ipdat);
     $flg=2;
   }
-  if(!isset($ipdat[$i-1])){$ipdat[$i-1]="";}            // ŸYakuba ƒGƒ‰[‚ğ“f‚­‚½‚ßb’è‘[’uc
+  if(!isset($ipdat[$i-1])){$ipdat[$i-1]="";}            // â—†Yakuba ã‚¨ãƒ©ãƒ¼ã‚’åããŸã‚æš«å®šæªç½®â€¦
   if($ipdat[$i-1]==$hostname){
     $flg++;
     $countip/=2;
     break;
   }
 }
-//V‚½‚ÈIP‚ğ’Ç‰Á
+//æ–°ãŸãªIPã‚’è¿½åŠ 
 if(($flg==0)||($flg==2)) array_unshift($ipdat,$hostname,time());
 if($flg!=1){
   $countip=(int)(count($ipdat)/2);

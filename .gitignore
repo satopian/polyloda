@@ -1,0 +1,12 @@
+host.lst
+idhost.lst
+img.cgi*
+index.html
+*.htm
+tree.cgi
+ref
+src
+thumb
+thumbs
+!thumbs/index.html
+define.php

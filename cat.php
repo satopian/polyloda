@@ -3,78 +3,78 @@
  Catalog Mode
 futaba.php & gazou.php & thumbnail.php
 ----------------------------------------------------------------------------
-‚±‚ÌƒXƒNƒŠƒvƒg‚ÍƒŒƒbƒcPHP!<http://php.s3.to/>‚Ìgazou.php‚ğ‰ü‘¢‚µ‚½‚à‚Ì‚ğ
-X‚É‰ü‘¢‚µ‚½‚Ó‚½‚Îš‚¿‚á‚ñ‚Ë‚é<http://www.2chan.net/script/>‚Ìfutaba.php‚Ì
-•\Œ»•”•ª‚ğ”²‚«æ‚èæ‚Á‚Ä•t‚¯‚½futaba.phpê—p‚ÌƒJƒ^ƒƒO‚Å‚·B
+ã“ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã¯ãƒ¬ãƒƒãƒ„PHP!<http://php.s3.to/>ã®gazou.phpã‚’æ”¹é€ ã—ãŸã‚‚ã®ã‚’
+æ›´ã«æ”¹é€ ã—ãŸãµãŸã°â˜…ã¡ã‚ƒã‚“ã­ã‚‹<http://www.2chan.net/script/>ã®futaba.phpã®
+è¡¨ç¾éƒ¨åˆ†ã‚’æŠœãå–ã‚Šå–ã£ã¦ä»˜ã‘ãŸfutaba.phpå°‚ç”¨ã®ã‚«ã‚¿ãƒ­ã‚°ã§ã™ã€‚
 
-İ’u–@FiƒIƒŠƒWƒiƒ‹‚Ìfutaba.php‚ª‰Ò“­‚µ‚Ä‚¢‚é–‚ğ‘O’ñ‚Æ‚µ‚Äà–¾‚µ‚Ü‚·j
-1) thumbsƒfƒBƒŒƒNƒgƒŠ‚ğì‚èAƒp[ƒ~ƒbƒVƒ‡ƒ“‚ğ777(707)‚É‚µ‚Ü‚·
-2) Œã‚Ícat.phpƒtƒ@ƒCƒ‹‚ğftp“]‘—‚µAcat.php‚ÉƒAƒNƒZƒX‚·‚é‚¾‚¯‚Å‚·B
+è¨­ç½®æ³•ï¼šï¼ˆã‚ªãƒªã‚¸ãƒŠãƒ«ã®futaba.phpãŒç¨¼åƒã—ã¦ã„ã‚‹äº‹ã‚’å‰æã¨ã—ã¦èª¬æ˜ã—ã¾ã™ï¼‰
+1) thumbsãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’ä½œã‚Šã€ãƒ‘ãƒ¼ãƒŸãƒƒã‚·ãƒ§ãƒ³ã‚’777(707)ã«ã—ã¾ã™
+2) å¾Œã¯cat.phpãƒ•ã‚¡ã‚¤ãƒ«ã‚’ftpè»¢é€ã—ã€cat.phpã«ã‚¢ã‚¯ã‚»ã‚¹ã™ã‚‹ã ã‘ã§ã™ã€‚
 
-  public_html (ƒz[ƒ€ƒfƒBƒŒƒNƒgƒŠ)
+  public_html (ãƒ›ãƒ¼ãƒ ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª)
       |
-      +-- futaba [777(707)] ƒXƒNƒŠƒvƒgƒtƒHƒ‹ƒ_
-             |  futaba.php [644(604)] –{‘ÌƒXƒNƒŠƒvƒg
+      +-- futaba [777(707)] ã‚¹ã‚¯ãƒªãƒ—ãƒˆãƒ•ã‚©ãƒ«ãƒ€
+             |  futaba.php [644(604)] æœ¬ä½“ã‚¹ã‚¯ãƒªãƒ—ãƒˆ
              |  cat.php    [644(604)] Catalog Mode <<**
-             |  repng2jpeg [755(705)] •K—v‚Ìê‡‚Ì‚İ“±“ü <<**
+             |  repng2jpeg [755(705)] å¿…è¦ã®å ´åˆã®ã¿å°å…¥ <<**
              |
-             +-- src       [777(707)] Œ³‰æ‘œ—pƒtƒHƒ‹ƒ_
+             +-- src       [777(707)] å…ƒç”»åƒç”¨ãƒ•ã‚©ãƒ«ãƒ€
              |
-             +-- thumb     [777(707)] –{‘ÌƒTƒ€ƒlƒCƒ‹ƒtƒHƒ‹ƒ_
+             +-- thumb     [777(707)] æœ¬ä½“ã‚µãƒ ãƒã‚¤ãƒ«ãƒ•ã‚©ãƒ«ãƒ€
              |
-             +-- thumbs    [777(707)] Catalog Mode—pƒTƒ€ƒlƒCƒ‹ƒtƒHƒ‹ƒ_ <<**
+             +-- thumbs    [777(707)] Catalog Modeç”¨ã‚µãƒ ãƒã‚¤ãƒ«ãƒ•ã‚©ãƒ«ãƒ€ <<**
 
 
-yôòƒ‚[ƒhzFcat.php ‚Ì––”ö‚Éu?cleanv‚Æ•t‚¯‚ÄŒÄ‚Ño‚·
-@@@@@@@@—á@http://``/futaba/cat.php?clean
-@@@@@@@@ôòƒ‚[ƒh‚ª³í‚È‚ç‚ÎA•s—pƒTƒ€ƒlƒCƒ‹Á‹‚µ‚Ä‚©‚ç cat.php ‚É–ß‚è‚Ü‚·B
-@@@@@@@@u•s—pƒTƒ€ƒlƒCƒ‹‚ª‘‚¦‚½‚©‚ÈHv‚Æv‚í‚ê‚½‚Éôò‚µ‚Ä‰º‚³‚¢B
+ã€æ´—æµ„ãƒ¢ãƒ¼ãƒ‰ã€‘ï¼šcat.php ã®æœ«å°¾ã«ã€Œ?cleanã€ã¨ä»˜ã‘ã¦å‘¼ã³å‡ºã™
+ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ä¾‹ã€€http://ã€œã€œ/futaba/cat.php?clean
+ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€æ´—æµ„ãƒ¢ãƒ¼ãƒ‰ãŒæ­£å¸¸ãªã‚‰ã°ã€ä¸ç”¨ã‚µãƒ ãƒã‚¤ãƒ«æ¶ˆå»ã—ã¦ã‹ã‚‰ cat.php ã«æˆ»ã‚Šã¾ã™ã€‚
+ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€Œä¸ç”¨ã‚µãƒ ãƒã‚¤ãƒ«ãŒå¢—ãˆãŸã‹ãªï¼Ÿã€ã¨æ€ã‚ã‚ŒãŸæ™‚ã«æ´—æµ„ã—ã¦ä¸‹ã•ã„ã€‚
 
-y‰º•”–‡”•\¦‚É‚Â‚¢‚Äz
-   À‘ªƒƒO’l‚ğZo‚µ‚Ä‚¢‚Ü‚·‚Ì‚ÅA
-     –Ú‚ÉŒ©‚¦‚éŒ©‚©‚¯ã’e‚©‚ê‚Ä‚¢‚éƒƒO’l‚Æ‚Íˆá‚¢‚Ü‚·B
+ã€ä¸‹éƒ¨æšæ•°è¡¨ç¤ºã«ã¤ã„ã¦ã€‘
+   å®Ÿæ¸¬ãƒ­ã‚°å€¤ã‚’ç®—å‡ºã—ã¦ã„ã¾ã™ã®ã§ã€
+     ç›®ã«è¦‹ãˆã‚‹è¦‹ã‹ã‘ä¸Šå¼¾ã‹ã‚Œã¦ã„ã‚‹ãƒ­ã‚°å€¤ã¨ã¯é•ã„ã¾ã™ã€‚
 
-‚±‚ÌƒCƒ“ƒ`ƒLL‚¢‰ü‘¢ƒXƒNƒŠƒvƒg‚ğg—p‚µ‚½‚¢‚©‚È‚é‘¹ŠQ‚É‘Î‚µ‚ÄìÒ‚ÍˆêØ‚ÌÓ”C‚ğ•‰‚¢‚Ü‚¹‚ñB
-@©ŒÈÓ”CƒXƒNƒŠƒvƒg‚Å‚·BƒTƒ|[ƒg‚Í–³‚¢‚Æv‚Á‚Ä‰º‚³‚¢B
-@©ŒÈ‰ğŒˆo—ˆ‚È‚¯‚ê‚ÎA‚±‚Ì–³•ÛØƒXƒNƒŠƒvƒg‚Í’ú‚ß‚Ä‰º‚³‚¢B
-@@@â‘Î‚ÉƒIƒŠƒWƒiƒ‹”z•zŒ³‚ÌƒTƒCƒg‚Å¿–â‚È‚Ç‚µ‚È‚¢‚æ‚¤‚ÉI
-@@@‰ü‘¢•¨‚ÉŠÖ‚µ‚Ä‚Ì¿–â‚È‚Ç‚Íƒh–À˜f‚Æ‚È‚è‚Ü‚·B
+ã“ã®ã‚¤ãƒ³ãƒã‚­è‡­ã„æ”¹é€ ã‚¹ã‚¯ãƒªãƒ—ãƒˆã‚’ä½¿ç”¨ã—ãŸã„ã‹ãªã‚‹æå®³ã«å¯¾ã—ã¦ä½œè€…ã¯ä¸€åˆ‡ã®è²¬ä»»ã‚’è² ã„ã¾ã›ã‚“ã€‚
+ã€€è‡ªå·±è²¬ä»»ã‚¹ã‚¯ãƒªãƒ—ãƒˆã§ã™ã€‚ã‚µãƒãƒ¼ãƒˆã¯ç„¡ã„ã¨æ€ã£ã¦ä¸‹ã•ã„ã€‚
+ã€€è‡ªå·±è§£æ±ºå‡ºæ¥ãªã‘ã‚Œã°ã€ã“ã®ç„¡ä¿è¨¼ã‚¹ã‚¯ãƒªãƒ—ãƒˆã¯è«¦ã‚ã¦ä¸‹ã•ã„ã€‚
+ã€€ã€€ã€€çµ¶å¯¾ã«ã‚ªãƒªã‚¸ãƒŠãƒ«é…å¸ƒå…ƒã®ã‚µã‚¤ãƒˆã§è³ªå•ãªã©ã—ãªã„ã‚ˆã†ã«ï¼
+ã€€ã€€ã€€æ”¹é€ ç‰©ã«é–¢ã—ã¦ã®è³ªå•ãªã©ã¯ãƒ‰è¿·æƒ‘ã¨ãªã‚Šã¾ã™ã€‚
  
-1. ‚±‚Ìcat.php‚Ì“]Ú”z•z‚ğ‹Ö~‚Æ‚³‚¹‚Ä’¸‚«‚Ü‚·B
-@@@’A‚µAX‚É‰ü‘¢‚â‰ü‘P‰ü—Ç‚³‚ê‚½•¨‚ÉŠÖ‚µ‚Ä‚Í‰Â‚Å‚·B
-@@@i‰ü‘¢”z•z‚Ìê‡‚ÍAƒXƒNƒŠƒvƒg‚ğ”cˆ¬‚µ‚Ä–À˜f‚É‚È‚ç‚È‚¢‚æ‚¤‚É‚µ‚Ä‰º‚³‚¢Bj
-2. –³Ó”C”z•z‚È‚Ì‚Å‰ü‘¢’˜ìŒ •\¦‚Í‹Lq‚µ‚Ä‚¢‚Ü‚¹‚ñ‚ªA
-@@@X‚É‰ü‘¢‹y‚Ñƒ‹[ƒ`ƒ“‚Ìˆê•”‚ÌˆÚA‚Åcat.php‚Ì’˜ìŒ •\¦‚ª•K—v‚Æv‚¤ê‡‚Í
-@@@Še©‚Å‹L“ü‚µ‚Ä‰º‚³‚¢BiƒXƒNƒŠƒvƒg“à‚ÉƒRƒƒ“ƒgƒAƒEƒg‹Lq‚Å‚à\‚¢‚Ü‚¹‚ñBj
-3. cat.php‚ÉŠÖ‚µ‚Ä‚Ì‹K–ñ‚ÍAŠeƒIƒŠƒWƒiƒ‹”z•zŒ³‚É€‚¶‚Ü‚·B
-4. —˜—p‚Ì‘O‚ÉA•K‚¸Še‰ü‘¢‘O”z•zŒ³‚Ì‹K–ñ‚É–Ú‚ğ’Ê‚µ‚Äç‚é–B
+1. ã“ã®cat.phpã®è»¢è¼‰é…å¸ƒã‚’ç¦æ­¢ã¨ã•ã›ã¦é ‚ãã¾ã™ã€‚
+ã€€ã€€ã€€ä½†ã—ã€æ›´ã«æ”¹é€ ã‚„æ”¹å–„æ”¹è‰¯ã•ã‚ŒãŸç‰©ã«é–¢ã—ã¦ã¯å¯ã§ã™ã€‚
+ã€€ã€€ã€€ï¼ˆæ”¹é€ é…å¸ƒã®å ´åˆã¯ã€ã‚¹ã‚¯ãƒªãƒ—ãƒˆã‚’æŠŠæ¡ã—ã¦è¿·æƒ‘ã«ãªã‚‰ãªã„ã‚ˆã†ã«ã—ã¦ä¸‹ã•ã„ã€‚ï¼‰
+2. ç„¡è²¬ä»»é…å¸ƒãªã®ã§æ”¹é€ è‘—ä½œæ¨©è¡¨ç¤ºã¯è¨˜è¿°ã—ã¦ã„ã¾ã›ã‚“ãŒã€
+ã€€ã€€ã€€æ›´ã«æ”¹é€ åŠã³ãƒ«ãƒ¼ãƒãƒ³ã®ä¸€éƒ¨ã®ç§»æ¤ã§cat.phpã®è‘—ä½œæ¨©è¡¨ç¤ºãŒå¿…è¦ã¨æ€ã†å ´åˆã¯
+ã€€ã€€ã€€å„è‡ªã§è¨˜å…¥ã—ã¦ä¸‹ã•ã„ã€‚ï¼ˆã‚¹ã‚¯ãƒªãƒ—ãƒˆå†…ã«ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆè¨˜è¿°ã§ã‚‚æ§‹ã„ã¾ã›ã‚“ã€‚ï¼‰
+3. cat.phpã«é–¢ã—ã¦ã®è¦ç´„ã¯ã€å„ã‚ªãƒªã‚¸ãƒŠãƒ«é…å¸ƒå…ƒã«æº–ã˜ã¾ã™ã€‚
+4. åˆ©ç”¨ã®å‰ã«ã€å¿…ãšå„æ”¹é€ å‰é…å¸ƒå…ƒã®è¦ç´„ã«ç›®ã‚’é€šã—ã¦å®ˆã‚‹äº‹ã€‚
 
 
-¡‚Ä‚·‚Æ‚Š‚•‚‚Á‚Û‚¢d—l by Yakuba
-EƒJƒ^ƒƒO•\¦‚ÅƒTƒ€ƒlƒCƒ‹—L‚Ìê‡‚Í–{•¶‚È‚µ
-EƒJƒ^ƒƒO•\¦‚ÅƒTƒ€ƒlƒCƒ‹–³‚Ìê‡‚Í–{•¶‚Sš
-EƒŒƒX”•t‚«
-ˆÈã‚Ì—l®‚É‚·‚é‚½‚ßAˆÈ‰º‚Ì“_‚ğ’ˆÓ‚·‚é‚±‚ÆB
-E72s–Ú•t‹ß‚Ì"–{•¶‚ğ‘}“ü"‚Ì’l‚ğ1‚Ì‚Ü‚Ü‚É‚·‚é(0‚Ìê‡‚ÍƒoƒO‚ ‚è)
-Eã‹L‚É”º‚Á‚Ä268s–Ú‚ğ‰ü‘¢‚·‚é‚±‚Æ(‰ü‘¢Ï)
+â– ã¦ã™ã¨ï½Šï½•ï½ã£ã½ã„ä»•æ§˜ by Yakuba
+ãƒ»ã‚«ã‚¿ãƒ­ã‚°è¡¨ç¤ºã§ã‚µãƒ ãƒã‚¤ãƒ«æœ‰ã®å ´åˆã¯æœ¬æ–‡ãªã—
+ãƒ»ã‚«ã‚¿ãƒ­ã‚°è¡¨ç¤ºã§ã‚µãƒ ãƒã‚¤ãƒ«ç„¡ã®å ´åˆã¯æœ¬æ–‡ï¼”å­—
+ãƒ»ãƒ¬ã‚¹æ•°ä»˜ã
+ä»¥ä¸Šã®æ§˜å¼ã«ã™ã‚‹ãŸã‚ã€ä»¥ä¸‹ã®ç‚¹ã‚’æ³¨æ„ã™ã‚‹ã“ã¨ã€‚
+ãƒ»72è¡Œç›®ä»˜è¿‘ã®"æœ¬æ–‡ã‚’æŒ¿å…¥"ã®å€¤ã‚’1ã®ã¾ã¾ã«ã™ã‚‹(0ã®å ´åˆã¯ãƒã‚°ã‚ã‚Š)
+ãƒ»ä¸Šè¨˜ã«ä¼´ã£ã¦268è¡Œç›®ã‚’æ”¹é€ ã™ã‚‹ã“ã¨(æ”¹é€ æ¸ˆ)
 ------------------------------------------------------------------------- */
 
-// Šî–{İ’è-----------------------------------------------------------------
-define("LOGFILE", 'img.cgi');                   //ƒƒOƒtƒ@ƒCƒ‹–¼
-define("TREEFILE", 'tree.cgi');                 //ƒƒOƒtƒ@ƒCƒ‹–¼
-define("TITLE", '‰æ‘œŒf¦”Â');                  //ƒ^ƒCƒgƒ‹
-define("HOME",  '../index.html');               //uƒz[ƒ€v‚Ö‚ÌƒŠƒ“ƒN
-define("PHP_SELF", 'futaba.php');               //–{‘ÌƒXƒNƒŠƒvƒg–¼
-define("PHP_SELF2", 'index.html');              //“ü‚èŒûƒtƒ@ƒCƒ‹–¼
-define("LIMIT", 50);                            //ƒXƒŒ–{”
-define("REGZCUN", 10);                          //ƒJƒ^ƒƒOƒ‚[ƒh‚Ì‰æ‘œs”
-define("MESSAGE", 1);                           //–{•¶‚ğ‘}“ü (n=0 y=1)
-define("SYNTHETIC_COUNT", 0);                   //‰º•”‚ÉƒJƒEƒ“ƒg‚ğo‚· (n=0 y=1)
+// åŸºæœ¬è¨­å®š-----------------------------------------------------------------
+define("LOGFILE", 'img.cgi');                   //ãƒ­ã‚°ãƒ•ã‚¡ã‚¤ãƒ«å
+define("TREEFILE", 'tree.cgi');                 //ãƒ­ã‚°ãƒ•ã‚¡ã‚¤ãƒ«å
+define("TITLE", 'ã½ã‚Šã‚ã ã€‚- ãƒãƒªãƒ•ã‚§ãƒãƒ¼ãƒ«ç§‹å±±æƒ…å ±');                  //ã‚¿ã‚¤ãƒˆãƒ«
+define("HOME",  '../index.html');               //ã€Œãƒ›ãƒ¼ãƒ ã€ã¸ã®ãƒªãƒ³ã‚¯
+define("PHP_SELF", 'index.php');               //æœ¬ä½“ã‚¹ã‚¯ãƒªãƒ—ãƒˆå
+define("PHP_SELF2", 'index.html');              //å…¥ã‚Šå£ãƒ•ã‚¡ã‚¤ãƒ«å
+define("LIMIT", 50);                            //ã‚¹ãƒ¬æœ¬æ•°
+define("REGZCUN", 10);                          //ã‚«ã‚¿ãƒ­ã‚°ãƒ¢ãƒ¼ãƒ‰æ™‚ã®ç”»åƒè¡Œæ•°
+define("MESSAGE", 1);                           //æœ¬æ–‡ã‚’æŒ¿å…¥ (n=0 y=1)
+define("SYNTHETIC_COUNT", 0);                   //ä¸‹éƒ¨ã«ã‚«ã‚¦ãƒ³ãƒˆã‚’å‡ºã™ (n=0 y=1)
 
-// ƒJƒ‰[İ’è---------------------------------------------------------------
-define("COL_BODY", '<body bgcolor="#ffffee" text="#800000" link="#0000ee" vlink="#0000ee" alink="#0000ee">'); //ƒ{ƒfƒBƒJƒ‰[
+// ã‚«ãƒ©ãƒ¼è¨­å®š---------------------------------------------------------------
+define("COL_BODY", '<body bgcolor="#ffffee" text="#800000" link="#0000ee" vlink="#0000ee" alink="#0000ee">'); //ãƒœãƒ‡ã‚£ã‚«ãƒ©ãƒ¼
 
-// ƒXƒ^ƒCƒ‹ƒV[ƒg-----------------------------------------------------------
+// ã‚¹ã‚¿ã‚¤ãƒ«ã‚·ãƒ¼ãƒˆ-----------------------------------------------------------
 $css_collis='<style type="text/css">
 <!--
 body,tr,td,th { font-size:12pt; }
@@ -84,29 +84,29 @@ small { font-size:10pt; }
 -->
 </style>';
 
-// ƒTƒ€ƒlƒCƒ‹İ’è-----------------------------------------------------------
-define("IMGDIR", 'src/');                       //‰æ‘œ‚Ì•Û‘¶‚µ‚Ä‚ ‚éƒtƒHƒ‹ƒ_
-define("THUMBDIR", 'thumbs/');                  //ƒTƒ€ƒlƒCƒ‹‚ğ•Û‘¶‚·‚éƒtƒHƒ‹ƒ_
-define("THUMB_DIR",'thumb/');                   //‘åŒ³‚ÌƒTƒ€ƒlƒCƒ‹‚ğ•Û‘¶‚µ‚Ä‚ ‚éƒtƒHƒ‹ƒ_
-define("IMG_W", 50);                            //o—Í‚·‚é‰æ‘œiƒTƒ€ƒlƒCƒ‹j‚Ì•
-define("IMG_H", 50);                            //o—Í‚·‚é‰æ‘œiƒTƒ€ƒlƒCƒ‹j‚Ì‚‚³
-define("S_IMG_JPG" , 60);                       //ƒTƒ€ƒlƒCƒ‹JPG‚Ìˆ³k—¦
-define("SCRIPT_NAME", 'cat.php');               // ‚±‚ÌƒXƒNƒŠƒvƒg‚Ìƒtƒ@ƒCƒ‹–¼
+// ã‚µãƒ ãƒã‚¤ãƒ«è¨­å®š-----------------------------------------------------------
+define("IMGDIR", 'src/');                       //ç”»åƒã®ä¿å­˜ã—ã¦ã‚ã‚‹ãƒ•ã‚©ãƒ«ãƒ€
+define("THUMBDIR", 'thumbs/');                  //ã‚µãƒ ãƒã‚¤ãƒ«ã‚’ä¿å­˜ã™ã‚‹ãƒ•ã‚©ãƒ«ãƒ€
+define("THUMB_DIR",'thumb/');                   //å¤§å…ƒã®ã‚µãƒ ãƒã‚¤ãƒ«ã‚’ä¿å­˜ã—ã¦ã‚ã‚‹ãƒ•ã‚©ãƒ«ãƒ€
+define("IMG_W", 50);                            //å‡ºåŠ›ã™ã‚‹ç”»åƒï¼ˆã‚µãƒ ãƒã‚¤ãƒ«ï¼‰ã®å¹…
+define("IMG_H", 50);                            //å‡ºåŠ›ã™ã‚‹ç”»åƒï¼ˆã‚µãƒ ãƒã‚¤ãƒ«ï¼‰ã®é«˜ã•
+define("S_IMG_JPG" , 60);                       //ã‚µãƒ ãƒã‚¤ãƒ«JPGã®åœ§ç¸®ç‡
+define("SCRIPT_NAME", 'cat.php');               // ã“ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã®ãƒ•ã‚¡ã‚¤ãƒ«å
 
-//›ˆ‚Ìrepng2jpeg‚ÅƒTƒ€ƒlƒCƒ‹‚ğì‚é (n=0 y=1)
-//›ˆ: http://sugachan.dip.jp/download/
-//1‚Éİ’è‚³‚ê‚Ä‚à exec ƒRƒ}ƒ“ƒh‚ªg‚¦‚È‚¢ƒT[ƒo‚Ìê‡A©“®“I‚ÉGD‚Åˆ—‚³‚ê‚Ü‚·B
-//®A”»•Ê‚ÍŠmÀ«‚Í‚ ‚è‚Ü‚¹‚ñBƒT[ƒo‘¤‚Ì•Ï‘¥“I‚Èİ’è‚ÅA
-//  ‰½‚©‚µ‚ç‚ÌƒGƒ‰[‚âƒTƒ€ƒlƒCƒ‹”­¶‚µ‚È‚¢ê‡‚Í0‚Æ‚µ‚Ä‰^‰c‚µ‚Ä‰º‚³‚¢B
+//è…å‡¦ã®repng2jpegã§ã‚µãƒ ãƒã‚¤ãƒ«ã‚’ä½œã‚‹ (n=0 y=1)
+//è…å‡¦: http://sugachan.dip.jp/download/
+//1ã«è¨­å®šã•ã‚Œã¦ã‚‚ exec ã‚³ãƒãƒ³ãƒ‰ãŒä½¿ãˆãªã„ã‚µãƒ¼ãƒã®å ´åˆã€è‡ªå‹•çš„ã«GDã§å‡¦ç†ã•ã‚Œã¾ã™ã€‚
+//å°šã€åˆ¤åˆ¥ã¯ç¢ºå®Ÿæ€§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚ã‚µãƒ¼ãƒå´ã®å¤‰å‰‡çš„ãªè¨­å®šã§ã€
+//  ä½•ã‹ã—ã‚‰ã®ã‚¨ãƒ©ãƒ¼ã‚„ã‚µãƒ ãƒã‚¤ãƒ«ç™ºç”Ÿã—ãªã„å ´åˆã¯0ã¨ã—ã¦é‹å–¶ã—ã¦ä¸‹ã•ã„ã€‚
 define("SUGA_DOCORO", 0);
 // -------------------------------------------------------------------------
 
-/* ‹L–•\¦ */
+/* è¨˜äº‹è¡¨ç¤º */
 $path = realpath("./").'/'.IMGDIR;
 $buf = Washing($_SERVER{'QUERY_STRING'});
 $natural=FALSE;
 $re_meta='<html><META HTTP-EQUIV="refresh" content="0;'.
-         'URL='.SCRIPT_NAME.'"><body>‰æ–Ê‚ğØ‚èŠ·‚¦‚Ü‚·...</body></html>';
+         'URL='.SCRIPT_NAME.'"><body>ç”»é¢ã‚’åˆ‡ã‚Šæ›ãˆã¾ã™...</body></html>';
 switch($buf){
   case '': updatelog(); exit;
   case 'natural': $natural=TRUE; updatelog(); exit;
@@ -114,24 +114,24 @@ switch($buf){
   default: echo $re_meta; exit;
 }
 
-/* ƒwƒbƒ_ */
+/* ãƒ˜ãƒƒãƒ€ */
 function head(&$dat){
   global $css_collis;
   $dat.='<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="ja">
 <head>
-<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=Shift_JIS">
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=utf-8">
 <meta name="robots" content="noindex,nofollow,noarchive">
 <!-- meta HTTP-EQUIV="pragma" CONTENT="no-cache" -->
 '.$css_collis.'
 <title>'.TITLE.'</title>
 </head>
 '.COL_BODY.'
-<!--ŸƒAƒiƒ‰ƒCƒY‚È‚Ç-->
+<!--â—†ã‚¢ãƒŠãƒ©ã‚¤ã‚ºãªã©-->
 ';
 }
 
-/* ‹L–•”•ª */
+/* è¨˜äº‹éƒ¨åˆ† */
 function updatelog($resno=0){
   global $path,$natural;$p=0;
 
@@ -141,15 +141,15 @@ function updatelog($resno=0){
     $counttree=count($tree);
     for($i=0; $i<$counttree; $i++){
       list($artno,)=explode(",", rtrim($tree[$i]));
-      if($artno==$resno){ $st=$i;$find=true;break; } //ƒŒƒXæŒŸõ
+      if($artno==$resno){ $st=$i;$find=true;break; } //ãƒ¬ã‚¹å…ˆæ¤œç´¢
     }
-    if(!$find){echo"<html><body><hr>ŠY“–‹L–‚ª‚İ‚Â‚©‚è‚Ü‚¹‚ñ<hr></body></html>";exit;}
+    if(!$find){echo"<html><body><hr>è©²å½“è¨˜äº‹ãŒã¿ã¤ã‹ã‚Šã¾ã›ã‚“<hr></body></html>";exit;}
   }
   $line = file(LOGFILE);
   $countline=count($line);
   for($i=0; $i<$countline; $i++){
     list($no,) = explode(",", $line[$i]);
-    $lineindex[$no]=$i + 1; //‹t•ÏŠ·ƒe[ƒuƒ‹ì¬
+    $lineindex[$no]=$i + 1; //é€†å¤‰æ›ãƒ†ãƒ¼ãƒ–ãƒ«ä½œæˆ
   }
 
   $counttree = count($tree);
@@ -171,13 +171,13 @@ function updatelog($resno=0){
       $st = $page;
 
       if($natural){
-        $nsw = '“Še‡';
-        $rnsw = '¸~‡';
+        $nsw = 'æŠ•ç¨¿é †';
+        $rnsw = 'æ˜‡é™é †';
         $nlink = SCRIPT_NAME;
         $ntd = '#e04066';
           }else{
-        $nsw = '¸~‡';
-        $rnsw = '“Še‡';
+        $nsw = 'æ˜‡é™é †';
+        $rnsw = 'æŠ•ç¨¿é †';
         $nlink = SCRIPT_NAME.'?natural';
         $ntd = '#0040e0';
       }
@@ -185,12 +185,12 @@ function updatelog($resno=0){
       $dat.='<font color="#800000" size="5">
 <b><div style="font-size: 20pt;text-align: center;">'.TITLE.'</div></b></font>
 <hr>
-[<a href="'.PHP_SELF2.'">Œf¦”Â‚É–ß‚é</a>]
-[<a href="'.HOME.'" target="_top">ƒz[ƒ€</a>]
-[<a href="javascript:location.reload()">Ä“Ç</a>]
+[<a href="'.PHP_SELF2.'">æ²ç¤ºæ¿ã«æˆ»ã‚‹</a>]
+[<a href="'.HOME.'" target="_top">ãƒ›ãƒ¼ãƒ </a>]
+[<a href="javascript:location.reload()">å†èª­è¾¼</a>]
 <!--[<a href="'.$nlink.'">'.$rnsw.'</a>]-->
 <table width="100%"><tr><th bgcolor="'.$ntd.'">
-<font color="#FFFFFF">ƒJƒ^ƒƒOƒ‚[ƒh<!-- ('.$nsw.')--></font>
+<font color="#FFFFFF">ã‚«ã‚¿ãƒ­ã‚°ãƒ¢ãƒ¼ãƒ‰<!-- ('.$nsw.')--></font>
 </th></tr></table>
 ';
 
@@ -204,8 +204,8 @@ function updatelog($resno=0){
           $treeline = explode(",", rtrim($tree[$i]));
           $disptree = $treeline[0];
         }
-        $j=$lineindex[$disptree] - 1;    //ŠY“–‹L–‚ğ’T‚µ‚Ä$j‚ÉƒZƒbƒg
-        if(empty($line[$j])) continue;   //$j‚ª”ÍˆÍŠO‚È‚çŸ‚Ìs
+        $j=$lineindex[$disptree] - 1;    //è©²å½“è¨˜äº‹ã‚’æ¢ã—ã¦$jã«ã‚»ãƒƒãƒˆ
+        if(empty($line[$j])) continue;   //$jãŒç¯„å›²å¤–ãªã‚‰æ¬¡ã®è¡Œ
         list($no,,,,,$com,,,,$ext,$w,$h,$time,) = explode(",", $line[$j]);
 
         if($natural){
@@ -216,10 +216,10 @@ function updatelog($resno=0){
         }
 
         $jlc=count($treeline)-1;
-        // ‰æ‘œƒtƒ@ƒCƒ‹–¼
+        // ç”»åƒãƒ•ã‚¡ã‚¤ãƒ«å
         $img = $path.$time.$ext;
         $src = IMGDIR.$time.$ext;
-        //ƒTƒ€ƒlƒCƒ‹§ìw—ß
+        //ã‚µãƒ ãƒã‚¤ãƒ«åˆ¶ä½œæŒ‡ä»¤
         if(is_file($src) && !is_file(THUMBDIR.$time.'s.jpg')){
           if(!is_file(THUMB_DIR.$time.'s.jpg')){
             MakeHakusi($time);
@@ -228,12 +228,12 @@ function updatelog($resno=0){
           }
         }
 
-        // <imgƒ^ƒOì¬
+        // <imgã‚¿ã‚°ä½œæˆ
         $imgsrc = "";
         if($ext && is_file($img)){
           $whpx=GetImageSize(THUMBDIR.$time.'s.jpg');
           $whpixs=$whpx[3];
-          if($w && $h){ //ƒTƒCƒY‚ª‚ ‚é
+          if($w && $h){ //ã‚µã‚¤ã‚ºãŒã‚ã‚‹æ™‚
             if(@is_file(THUMBDIR.$time.'s.jpg')){
               $imgsrc = "<a href=\"".PHP_SELF."?res=$no\" target=_blank>".
                 "<img src=".THUMBDIR.$time.'s.jpg'." border=0 $whpixs></a>";
@@ -241,17 +241,17 @@ function updatelog($resno=0){
               $imgsrc = "<a href=\"".PHP_SELF."?res=$no\" target=_blank>".
                 "<img src=".$src." border=0 $whpixs></a>";
             }
-              }else{ //‚»‚êˆÈŠO
+              }else{ //ãã‚Œä»¥å¤–
             $imgsrc = "<a href=\"".$src."\" target=_blank><img src=".$src.
               " border=0></a>";
           }
         }
 
         $com = preg_replace("/<[^>]*>/","",$com);
-        $com = preg_replace("/(@| )/","",$com);
+        $com = preg_replace("/(ã€€| )/","",$com);
         if(MESSAGE){
           if(function_exists("mb_substr") && function_exists("mb_strlen") && function_exists("mb_internal_encoding")){
-            mb_internal_encoding("SJIS"); $mbline = TRUE;
+            mb_internal_encoding("UTF-8"); $mbline = TRUE;
               }else{
             $mbline = FALSE;
           }
@@ -268,7 +268,7 @@ function updatelog($resno=0){
         $gzim++;$gzcom = ($gzim % REGZCUN) ? "" : "</tr>\n<tr>";
         if($imgsrc){
           if(MESSAGE) $mes="$com<br>"; else $mes="";
-//Ÿs‚ª‰ü‘¢‰ÓŠ          $imgsrc = "<td nowrap>$imgsrc<br><small>$mes$jlc</small></td>$gzcom\n";
+//æ¬¡è¡ŒãŒæ”¹é€ ç®‡æ‰€          $imgsrc = "<td nowrap>$imgsrc<br><small>$mes$jlc</small></td>$gzcom\n";
           $imgsrc = "<td nowrap>$imgsrc<br><small>$jlc</small></td>$gzcom\n";
           if(LIMIT==$gzim) $imgsrc = preg_replace("/</tr>\n<tr>\n$/","",$imgsrc);
           $dat.="$imgsrc";
@@ -280,8 +280,8 @@ function updatelog($resno=0){
         }
       }
       $dat.="\n</tr></table>\n";
-      clearstatcache(); //ƒtƒ@ƒCƒ‹‚Ìstat‚ğƒNƒŠƒA
-      if($resno) break; //res‚Ítree1s‚¾‚¯
+      clearstatcache(); //ãƒ•ã‚¡ã‚¤ãƒ«ã®statã‚’ã‚¯ãƒªã‚¢
+      if($resno) break; //resæ™‚ã¯tree1è¡Œã ã‘
     }
 
     if(SYNTHETIC_COUNT){
@@ -293,15 +293,15 @@ function updatelog($resno=0){
       closedir($dir);
       clearstatcache();
       $dat.='<center><table border="1" cellspacing="0" cellpadding="3"><tr>
-<td bgcolor="#d6d6f6" nowrap>‰æ‘œ‘”</td><td bgcolor="#f6f6f6" nowrap>'.$gcnt.'</td>
-<td bgcolor="#d6d6f6" nowrap>ƒXƒŒ–{”</td><td bgcolor="#f6f6f6" nowrap>'.$tct.'</td>
-<td bgcolor="#d6d6f6" nowrap>‹L–Œ”</td><td bgcolor="#f6f6f6" nowrap>'.$tcl.'</td>
+<td bgcolor="#d6d6f6" nowrap>ç”»åƒç·æ•°</td><td bgcolor="#f6f6f6" nowrap>'.$gcnt.'</td>
+<td bgcolor="#d6d6f6" nowrap>ã‚¹ãƒ¬æœ¬æ•°</td><td bgcolor="#f6f6f6" nowrap>'.$tct.'</td>
+<td bgcolor="#d6d6f6" nowrap>è¨˜äº‹ä»¶æ•°</td><td bgcolor="#f6f6f6" nowrap>'.$tcl.'</td>
 </tr></table></center>';
     }
 
     $dat.='<hr>
 <center>
-<!-- ŸL‚È‚Ç -->
+<!-- â—†åºƒå‘Šãªã© -->
 <small>- <a href="http://php.s3.to/" target="_top">GazouBBS</a>+<a href="http://www.2chan.net/" target="_top">futaba</a>+<a href="http://t-jun.kemoren.com" target="_top">Yakuba</a> -</small><br>
 </center>';
     $dat.='</body></html>';
@@ -309,11 +309,11 @@ function updatelog($resno=0){
   }
 }
 
-/* ƒTƒ€ƒlƒCƒ‹ƒTƒCƒYæ“¾ */
+/* ã‚µãƒ ãƒã‚¤ãƒ«ã‚µã‚¤ã‚ºå–å¾— */
 function MakeThumbnail($src, $f){
   $fthumb = THUMBDIR.$f.'s.jpg';
-  $size = getimagesize($src); //ƒTƒCƒYæ“¾
-  if($size[0] > IMG_W || $size[1] > IMG_H) { //ƒAƒXƒyƒNƒg”ä
+  $size = getimagesize($src); //ã‚µã‚¤ã‚ºå–å¾—
+  if($size[0] > IMG_W || $size[1] > IMG_H) { //ã‚¢ã‚¹ãƒšã‚¯ãƒˆæ¯”
     $W = IMG_W / $size[0];
     $H = IMG_H / $size[1];
     $key = ($W < $H) ? $W : $H;
@@ -329,7 +329,7 @@ function MakeThumbnail($src, $f){
       file_exists(realpath("./repng2jpeg.exe"))) ||
      (file_exists(realpath("./repng2jpeg")) &&
       is_executable(realpath("./repng2jpeg"))))){
-    // png2jpegƒTƒ€ƒlƒCƒ‹‰æ‘œ‚ğ•Û‘¶
+    // png2jpegã‚µãƒ ãƒã‚¤ãƒ«ç”»åƒã‚’ä¿å­˜
     if(file_exists(realpath("./repng2jpeg"))){
       $suga_path = realpath("./repng2jpeg");
         }else{
@@ -337,7 +337,7 @@ function MakeThumbnail($src, $f){
     }
     @exec($suga_path." $src $fthumb $resize[0] $resize[1] ".S_IMG_J);
       }else{
-    //GD‚Ìƒo[ƒWƒ‡ƒ“‚²‚Æ‚Éˆ—
+    //GDã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã”ã¨ã«å‡¦ç†
     $thu = (function_exists("ImageCreateTrueColor") && get_gd_ver()=="2") ? TRUE : FALSE;
     if($thu){
       $img_t = ImageCreateTrueColor($resize[0],$resize[1]);	
@@ -355,17 +355,17 @@ function MakeThumbnail($src, $f){
         }else{
       ImageCopyResized($img_t,$img_i,0,0,0,0,$resize[0],$resize[1],$size[0],$size[1]);
     }
-    //ƒTƒ€ƒlƒCƒ‹‚Í‘S‚Äjpg‚É‚È‚è‚Ü‚·EEE
+    //ã‚µãƒ ãƒã‚¤ãƒ«ã¯å…¨ã¦jpgã«ãªã‚Šã¾ã™ãƒ»ãƒ»ãƒ»
     ImageJpeg($img_t, $fthumb, S_IMG_JPG);
-    //”jŠü
+    //ç ´æ£„
     ImageDestroy($img_i);
     ImageDestroy($img_t);
   }
 }
 
-//ƒŠƒ\[ƒXƒI[ƒo[‚ÌƒtƒHƒ[—p (ƒ_ƒ~[‰æ‘œ”­¶)
+//ãƒªã‚½ãƒ¼ã‚¹ã‚ªãƒ¼ãƒãƒ¼ã®ãƒ•ã‚©ãƒ­ãƒ¼ç”¨ (ãƒ€ãƒŸãƒ¼ç”»åƒç™ºç”Ÿ)
 function MakeHakusi($f) {
-  //GD‚Ìƒo[ƒWƒ‡ƒ“‚²‚Æ‚Éˆ—
+  //GDã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã”ã¨ã«å‡¦ç†
   if(function_exists("ImageCreateTrueColor") && get_gd_ver()=="2"){
     $img = ImageCreateTruecolor(50,50);
       }else{
@@ -379,12 +379,12 @@ function MakeHakusi($f) {
   ImageDestroy($img);
 }
 
-//gd‚Ìƒo[ƒWƒ‡ƒ“‚ğ’²‚×‚é
+//gdã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚’èª¿ã¹ã‚‹
 function get_gd_ver(){
   if(function_exists("gd_info")){
     $gdver=gd_info();
     $phpinfo=$gdver["GD Version"];
-      }else{ //php4.3.0–¢–—p
+      }else{ //php4.3.0æœªæº€ç”¨
     ob_start();
     phpinfo(8);
     $phpinfo=ob_get_contents();
@@ -400,7 +400,7 @@ function get_gd_ver(){
   return $phpinfo;
 }
 
-//ôò
+//æ´—æµ„
 function Washing($clean){
   $clean = trim($clean);
   $clean = htmlspecialchars($clean, ENT_QUOTES);
@@ -411,7 +411,7 @@ function Washing($clean){
   return $clean;
 }
 
-//ƒtƒ@ƒCƒ‹‚ğôò‚·‚é
+//ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ´—æµ„ã™ã‚‹
 function Clean() {
   $dir = realpath("./").'/'.IMGDIR;
   $thu = realpath("./").'/'.THUMBDIR;

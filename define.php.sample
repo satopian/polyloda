@@ -1,0 +1,3 @@
+<?php
+define("ADMIN_PASS", 'replce_me');                  // 管理者パス
+?>
