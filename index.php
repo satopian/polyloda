@@ -248,7 +248,7 @@ $tomato = array('tomato' => '管理人', 'tomato2' => '副管理人', 'tomato3' 
 // hiro 追加 ここまで
 
 // 拒否設定--------------------------------------------------------------------
-$badstring = array("dummy_string","dummy_string2","無料動画","無料画像","友達募集");      // 拒絶する文字列
+$badstring = array("vuitton","ブルガリ","chanel","gucci","dummy_string2","無料動画","無料画像","友達募集");      // 拒絶する文字列
 $badfile = array("dummy","dummy2");                     // 拒絶するファイルのmd5
 $badip = array("addr.dummy.com","addr.dummy2.comt");    // 拒絶するホスト
 
