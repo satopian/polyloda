@@ -402,7 +402,7 @@ if (FALSE) {
     // hage 変更ここまで
   }
   $dat .= '<tr><td bgcolor="#eeaa88"><b>削除キー</b></td>'.
-          '<td><input type="password" name="pwd" size="8" maxlength="8" value="">'.
+          '<td><input type="password" name="pwd" size="8" value="">'.
           '<small>';
   // hiro 追加 2005.03.15
   if(PASS_CHECK) { $dat .= ' <font color="#FF0099">必須</font> '; }
@@ -831,7 +831,7 @@ __STOP__;
   $dat .= '<table align="right"><tr><td nowrap align="center">'.
           '<input type="hidden" name="mode" value="usrdel">【記事削除】'.
           '[<input type="checkbox" name="onlyimgdel" value="on">画像だけ消す]<br>'.
-          '削除キー<input type="password" name="pwd" size="8" maxlength="8" value="">'.
+          '削除キー<input type="password" name="pwd" size="8" value="">'.
           '<input type="submit" value="削除"></form></td></tr></table>';
 
     if(!$resno){ //res時は表示しない
@@ -1073,8 +1073,7 @@ function regist($name,$email,$sub,$com,$url,$pwd,$upfile,$upfile_name,$resto){
   }
 */
   // No.とパスと時間とURLフォーマット
-  list($usec,) = explode(' ', microtime());
-  srand($usec * 1000000);
+  srand();
 
   if($pwd==""){
     if(PASS_CHECK) { error("削除キーが未入力です",  $dest); }
