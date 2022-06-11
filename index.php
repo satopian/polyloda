@@ -154,8 +154,8 @@ define("MAX_H", 250);                           // 投稿サイズ高さ
 define("PAGE_DEF", 10);                         // 一ページに表示する記事
 define("FOLL_ADD", 110);                        // 以下省略（一ページに表示する記事×指定頁数＝設定数
 define("LOG_MAX", 1000);                        // ログ最大行数
-// define("ADMIN_PASS", 'password');                  // 管理者パス
-require("./define.php");
+define("ADMIN_PASS", 'admin_pass');                  // 管理者パス
+// require("./define.php");
 define("RE_COL", '789922');                     // ＞が付いた時の色
 define("PHP_SELF", 'index.php');               // このスクリプト名
 define("PHP_SELF2", 'index.html');              // 入り口ファイル名
@@ -932,7 +932,8 @@ function regist($name,$email,$sub,$com,$url,$pwd,$upfile,$upfile_name,$resto){
   global $path,$badstring,$badfile,$badip,$pwdc,$textonly;
   global $noanime,$chkname,$chkid,$bakres;      // hiro 変更 2005.03.16
   $dest=""; $mes=""; $ext="";
-
+  $pwd= $pwd ? (string)$pwd :'';
+  $pwdc = $pwdc ? (string)$pwdc :'';
   // honishi
   $textonly = TRUE;
   $noanime = TRUE;
@@ -963,6 +964,12 @@ function regist($name,$email,$sub,$com,$url,$pwd,$upfile,$upfile_name,$resto){
   // ▲Yakuba追加
 
   // アップロード処理
+  if(isset($_FILES["upfile"]["error"])){//エラーチェック
+	if(in_array($_FILES["upfile"]["error"],[1,2])){
+		error('ファイルサイズが大きすぎます。');//容量オーバー
+	} 
+  }
+
   if($upfile&&file_exists($upfile)){
     $dest = $path.$tim.'.tmp';
     move_uploaded_file($upfile, $dest);
@@ -1194,7 +1201,7 @@ function regist($name,$email,$sub,$com,$url,$pwd,$upfile,$upfile_name,$resto){
     // hiro 追加 2005.03.24
     if(stristr($chkurl, '_tstop_')) { error("スレッドストッパー。。。(‾ー‾)ニヤリッ", $dest); }
     // hiro 追加 ここまで
-    if($stop_flag) { error("スレッドストップです。はい。", $dest); }
+    // if($stop_flag) { error("スレッドストップです。はい。", $dest); }
     if(THREAD_STOP_TIME && (($time - $ltime) >= (THREAD_STOP_HOUR*60*60))) { $stop_flag = TRUE; error("制限時間を越えましたので書き込みが出来ません", $dest); }         // ◆Yakuba追加
   }
 
@@ -1568,9 +1575,6 @@ function treedel($delno){
 function CleanStr($str){
   global $admin;
   $str = trim($str);//先頭と末尾の空白除去
-  if (get_magic_quotes_gpc()) {//¥を削除
-    $str = stripslashes($str);
-  }
   if($admin!=ADMIN_PASS){//管理者はタグ可能
     if(PHP_VERSION_ID >= 50400){$str = htmlspecialchars($str, ENT_COMPAT | ENT_HTML401, 'UTF-8');} else {$str = htmlspecialchars($str);}     //タグっ禁止 ◆Yakuba PHP5.4.0以降対応
     $str = str_replace("&amp;", "&", $str);//特殊文字
@@ -1584,9 +1588,14 @@ function usrdel($no,$pwd){
   $delno = array("dummy");
   $delflag = FALSE;
   reset($_POST);
-    while ($item = each($_POST)){
-     if($item[1]=='delete'){array_push($delno,$item[0]);$delflag=TRUE;}
-    }
+
+  foreach($_POST as $key=>$val){
+	if($val==='delete'){
+		array_push($delno,$key);
+		$delflag=TRUE;
+	}
+  }
+
   if($pwd=="" && $pwdc!="") $pwd=$pwdc;
   $line = @file(LOGFILE);
   $countline=count($line);
@@ -1649,9 +1658,13 @@ function admindel($pass){
   $delno = array("dummy");
   $delflag = FALSE;
   reset($_POST);
-  while ($item = each($_POST)){
-   if($item[1]=='delete'){array_push($delno,$item[0]);$delflag=TRUE;}
+  foreach($_POST as $key=>$val){
+	if($val==='delete'){
+		array_push($delno,$key);
+		$delflag=true;
+	}
   }
+
   if($delflag){
     // hage 追加 2004.8.1
     ignore_user_abort(1);
@@ -1775,11 +1788,17 @@ function admin_chgthumb($pass){
   $chgno = array('dummy');
   $chgflag = FALSE;
   reset($_POST);
-  while ($item = each($_POST)){
-   if($item[1]=='chgthumb'){array_push($chgno,$item[0]);$chgflag=TRUE;}
+
+  foreach($_POST as $key=>$val){
+	if($val==='chgthumb'){
+		array_push($chgno,$key);
+		$chgflag=TRUE;
+	}
    // 差し替えサムネファイル名取得
-   if($item[0]=='thumb'){$thumb_name=$item[1];}
-  }
+   if($key=='thumb'){$thumb_name=$val;}
+
+}
+
   if($chgflag){
     // hage 追加 2004.8.1
     ignore_user_abort(1);
@@ -1916,8 +1935,11 @@ function admin_sage($pass){
   $chgno = array('dummy');
   $chgflag = FALSE;
   reset($_POST);
-  while($item = each($_POST)) {
-    if($item[1]=='sage') { array_push($chgno,$item[0]); $chgflag = TRUE; }
+  foreach($_POST as $key=>$val){
+	if($val==='sage'){
+		array_push($chgno,$key);
+		$chgflag = TRUE;
+	}
   }
 
   if($chgflag) {
@@ -2062,8 +2084,12 @@ function regist_host($pass){
   $chgno = array('dummy');
   $chgflag = FALSE;
   reset($_POST);
-  while ($item = each($_POST)){
-    if($item[1]=='regist'){array_push($chgno,$item[0]);$chgflag=TRUE;}
+
+  foreach($_POST as $key=>$val){
+	if($val==='regist'){
+		array_push($chgno,$key);
+		$chgflag=TRUE;
+	}
   }
 
   // チェックの付いた項目があれば、更新
@@ -2180,10 +2206,17 @@ function delete_host($pass){
   $idchgno = array('dummy');
   $idchgflag = FALSE;
   reset($_POST);
-  while ($item = each($_POST)){
-    if($item[1]=='delete'){array_push($chgno,$item[0]);$chgflag=TRUE;}
-    if($item[1]=='id_delete'){array_push($idchgno,$item[0]);$idchgflag=TRUE;}
-  }
+	foreach($_POST as $key=>$val){
+		if($val==='delete'){
+			{array_push($chgno,$key);
+				$chgflag=TRUE;}
+		}
+		if($val==='id_delete'){
+			array_push($idchgno,$key);
+			$idchgflag=TRUE;
+		}
+	}
+	
 
   $setflag = FALSE;
   $newdat = array('dummy');
@@ -2276,8 +2309,10 @@ function admin_threadstop($pass){
   $chgno = array('dummy');
   $chgflag = FALSE;
   reset($_POST);
-  while($item = each($_POST)) {
-    if(!strcmp($item[1], 'chgmod')) { array_push($chgno, $item[0]); $chgflag = TRUE; }
+  foreach($_POST as $key=>$val){
+	if(!strcmp($val, 'chgmod')){
+		array_push($chgno, $key); $chgflag = TRUE;
+	}
   }
 
   // チェックの付いた項目があれば、更新
