@@ -1073,7 +1073,9 @@ function regist($name,$email,$sub,$com,$url,$pwd,$upfile,$upfile_name,$resto){
   }
 */
   // No.とパスと時間とURLフォーマット
-  srand((double)microtime()*1000000);
+  list($usec,) = explode(' ', microtime());
+  srand($usec * 1000000);
+
   if($pwd==""){
     if(PASS_CHECK) { error("削除キーが未入力です",  $dest); }
     $pwd=rand();$pwd=substr($pwd,0,8);
