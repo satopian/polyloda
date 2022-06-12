@@ -129,12 +129,18 @@ ignore_user_abort(0);
 //error_reporting(E_ALL);
 error_reporting(E_ALL & ~E_NOTICE);
 // グローバル変数のセット
-extract($_POST);
-extract($_GET);
-extract($_COOKIE);
+// extract($_POST);
+// extract($_GET);
+// extract($_COOKIE);
+$mode = (string)filter_input(INPUT_POST, 'mode');
+$mode = $mode ? $mode : (string)filter_input(INPUT_GET, 'mode');
+$resto = (string)filter_input(INPUT_POST, 'resto',FILTER_VALIDATE_INT);
+$pwd = (string)(filter_input(INPUT_POST, 'pwd'));
+$admin = (string)filter_input(INPUT_POST, 'admin');
+$pass = (string)(filter_input(INPUT_POST, 'pass'));
+$onlyimgdel = filter_input(INPUT_POST, 'onlyimgdel',FILTER_VALIDATE_BOOLEAN);
+
 date_default_timezone_set('Asia/Tokyo');        // ◆Yakuba 標準時の設定(dateで必須)
-$upfile_name = isset($_FILES["upfile"]["name"]) ? $_FILES["upfile"]["name"] : "";
-$upfile = isset($_FILES["upfile"]["tmp_name"]) ? $_FILES["upfile"]["tmp_name"] : "";
 
 if(!defined('PHP_VERSION_ID')) {                // ◆Yakuba PHP5.2.7未満にPHP_VERSION_IDを設ける
   $v = explode('.',PHP_VERSION);
@@ -928,10 +934,21 @@ function  proxy_connect($port) {
 }
 
 /* 記事書き込み */
-function regist($name,$email,$sub,$com,$url,$pwd,$upfile,$upfile_name,$resto){
+function regist($resto=0){
   global $path,$badstring,$badfile,$badip,$pwdc,$textonly;
   global $noanime,$chkname,$chkid,$bakres;      // hiro 変更 2005.03.16
   $dest=""; $mes=""; $ext="";
+ 
+  $name = (string)filter_input(INPUT_POST, 'name');
+  $email = (string)filter_input(INPUT_POST, 'email');
+  $sub = (string)filter_input(INPUT_POST, 'sub');
+  $pwd = (string)(filter_input(INPUT_POST, 'pwd'));
+  $textonly = (string)(filter_input(INPUT_POST, 'textonly',FILTER_VALIDATE_BOOLEAN));
+  $url = '';
+  $com = (string)filter_input(INPUT_POST, 'com');
+  $upfile_name=isset($_FILES["upfile"]["name"]) ? $_FILES["upfile"]["name"] : "";
+  $upfile=isset($_FILES["upfile"]["tmp_name"]) ? $_FILES["upfile"]["tmp_name"] : "";
+ 
   $pwd= $pwd ? (string)$pwd :'';
   $pwdc = $pwdc ? (string)$pwdc :'';
   // honishi
@@ -2493,7 +2510,7 @@ die('');
 
 switch($mode){
   case 'regist':
-    regist($name,$email,$sub,$com,'',$pwd,$upfile,$upfile_name,$resto);
+    regist($resto);
     break;
   case 'admin':
     valid($pass);
