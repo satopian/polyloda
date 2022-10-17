@@ -310,14 +310,6 @@ function head(&$dat){
     if(self!=top){top.location=self.location;}
   //-->
   </script>
-<script>
-  (function(i,s,o,g,r,a,m){i[\'GoogleAnalyticsObject\']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,\'script\',\'//www.google-analytics.com/analytics.js\',\'ga\');
-  ga(\'create\', \'UA-3087318-12\', \'polyloda.com\');
-  ga(\'send\', \'pageview\');
-</script>
 </head>
 
 <body bgcolor="#ffffee" text="#800000" link="#0000ee" vlink="#0000ee">
@@ -997,7 +989,7 @@ function regist($resto=0){
     $size = getimagesize($dest);
     if(!is_array($size)) error("アップロードに失敗しました<br>画像ファイル以外は受け付けません", $dest);
     $chk = md5_of_file($dest);
-    foreach($badfile as $value){if(FALSE && preg_match("#^$value#",$chk)){
+    foreach($badfile as $value){if(preg_match("#^$value#",$chk)){
       error("アップロードに失敗しました<br>同じ画像がありました", $dest); //拒絶画像
     }}
     chmod($dest,0666);
